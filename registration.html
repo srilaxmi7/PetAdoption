@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Page</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body class="register-page">
+    <div class="container">
+        <div class="register-text">Registration</div> 
+
+        <form action="registration.php" onsubmit="return validateForm()" method="post">
+            <label for="name">Name:</label>
+            <input type="text" name="Name" required><br>
+
+            <label for="username">Username:</label>
+            <input type="text" name="Username" required><br>
+
+            <label for="mobile">Mobile:</label>
+            <input type="text" name="Mobile" minlength="10" maxlength="10" required><br>
+
+            <label for="email">Email:</label>
+            <input type="email" name="Email" required><br>
+
+            <label for="password">Password:</label>
+            <input id="password1" type="password" name="Password" required><br>
+
+            <label for="Confirm-Password">Confirm Password:</label>
+            <input id="password2" type="password" name="Confirm-Password" required><br>
+
+            <button type="submit">Register</button>
+        </form>
+    </div>
+
+    <script>
+        function validateForm() {
+            var password = document.getElementById("password1").value;
+            var confirmPassword = document.getElementById("password2").value;
+
+            if (password !== confirmPassword) {
+                alert("The passwords donot match");
+                return false;
+            } else {
+                return true;
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Adoption - Add Pet</title>
+    <style>
+        /* Add your styles as needed */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-image: url('images/pet paw.jpg');
+            background-size: cover;
+            background-position: center;
+            padding: 20px;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            box-sizing: border-box;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+<form action="addpet.php" method="post" enctype="multipart/form-data">
+    <!-- Pet Details -->
+    <label for="petName">Pet Name:</label>
+    <input type="text" id="petName" name="petName" required>
+
+    <label for="petType">Pet Type:</label>
+    <input type="text" id="petType" name="petType" required>
+
+    <label for="petDescription">Description:</label>
+    <textarea id="petDescription" name="petDescription" required></textarea>
+
+    <!-- Donor Details -->
+    <label for="donorName">Your Name:</label>
+    <input type="text" id="donorName" name="donorName" required>
+
+    <label for="donorEmail">Your Email:</label>
+    <input type="email" id="donorEmail" name="donorEmail" required>
+
+    <label for="donorPhone">Your Phone:</label>
+    <input type="tel" id="donorPhone" name="donorPhone" minlength="10" maxlength="10" required>
+
+    <!-- Image Upload -->
+    <label for="petImage">Upload Pet Image:</label>
+    <input type="file" id="petImage" name="petImage" accept="image/*" required>
+
+    <!-- Submit Button -->
+    <button type="submit">Add Pet</button>
+    
+</form>
+
+</body>
+</html>
